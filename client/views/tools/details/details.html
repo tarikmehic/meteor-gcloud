@@ -1,0 +1,142 @@
+<template name="ToolsDetails">
+	<div class="page-container container">
+		<div class="row">
+			<div class="col-md-12" id="content">
+				<div class="row" id="title_row">
+					<div class="col-md-12">
+					</div>
+				</div>
+				{{> ToolsDetailsDetailsForm}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="menu">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="subcontent">
+				{{> yield region='ToolsDetailsSubcontent'}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="ToolsDetailsDetailsForm">
+	<div id="tools-details-details-form" class="">
+		<h2 id="component-title">
+			<a href="#" id="form-back-button" class="btn btn-default" title="back">
+				<span class="fa fa-chevron-left">
+				</span>
+			</a>
+			Tool details
+		</h2>
+		<form role="form" class="form-horizontal">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-title">
+				<label for="title" class="col-sm-3 control-label">
+					Title
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-title">
+						{{tool_details.title}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-description">
+				<label for="description" class="col-sm-3 control-label">
+					Description
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-description">
+						{{tool_details.description}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-link">
+				<label for="link" class="col-sm-3 control-label">
+					Link to tool
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-link">
+						{{tool_details.link}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-video">
+				<label for="video" class="col-sm-3 control-label">
+					Video link
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-video">
+						{{tool_details.video}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-possibilities">
+				<label for="possibilities" class="col-sm-3 control-label">
+					Possibilities
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-possibilities">
+						{{tool_details.possibilities}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-category">
+				<label for="category" class="col-sm-3 control-label">
+					Category
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-category">
+						{{tool_details.category}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-contact_email">
+				<label for="contact_email" class="col-sm-3 control-label">
+					Contact email
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-contact_email">
+						{{tool_details.contact_email}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-topic">
+				<label for="topic" class="col-sm-3 control-label">
+					Topic
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-topic">
+						{{tool_details.topic}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-company">
+				<label for="company" class="col-sm-3 control-label">
+					Company
+				</label>
+				<div class="input-div col-sm-9">
+					<p class="form-control-static  control-field-company">
+						{{tool_details.company}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div col-sm-9 col-sm-offset-3">
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

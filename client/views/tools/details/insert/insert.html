@@ -1,0 +1,53 @@
+<template name="ToolsDetailsInsert">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+			</div>
+		</div>
+		{{> ToolsDetailsInsertInsertForm}}
+	</div>
+</template>
+
+<template name="ToolsDetailsInsertInsertForm">
+	<div id="tools-details-insert-insert-form" class="">
+		<h2 id="component-title">
+			Add comment
+		</h2>
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-comment">
+				<label for="comment">
+					Comment
+				</label>
+				<div class="input-div">
+					<input type="text" name="comment" value="" class="form-control " autofocus="autofocus" required="required">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						Save
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+
